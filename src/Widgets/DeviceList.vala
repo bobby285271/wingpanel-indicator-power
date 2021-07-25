@@ -39,7 +39,7 @@ public class Power.Widgets.DeviceList : Gtk.ListBox {
             string device_path = path_entries.@get (value);
             try {
                 AppInfo statistics_app = AppInfo.create_from_commandline (
-                    "gnome-power-statistics --device " + device_path,
+                    "@gnome-power-manager@/bin/gnome-power-statistics --device " + device_path,
                     "",
                     AppInfoCreateFlags.NONE
                 );
